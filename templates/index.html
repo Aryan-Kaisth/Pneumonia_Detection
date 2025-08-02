@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pneumonia Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Pneumonia Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <label class="file-upload">
+        <input type="file" name="image" required onchange="displayFileName(this)">
+        <span id="filename">Choose an image...</span>
+      </label>
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if filename %}
+      <div class="meta">
+        <p><strong>File uploaded:</strong> {{ filename }}</p>
+      </div>
+    {% endif %}
+
+    {% if result %}
+      <div class="result">
+        <h2>Result: {{ result }}</h2>
+        <p>Confidence: {{ confidence }}%</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    function displayFileName(input) {
+      const fileName = input.files[0].name;
+      document.getElementById('filename').textContent = fileName;
+    }
+  </script>
+</body>
+</html>

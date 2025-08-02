@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f7f8fc, #e2e6ee);
+  color: #1c1c1e;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  background-color: #007aff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload:hover {
+  background-color: #0058cc;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#filename {
+  font-size: 1rem;
+}
+
+button {
+  background-color: #34c759;
+  border: none;
+  padding: 14px 26px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #28a745;
+  transform: scale(1.04);
+}
+
+.result {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #f1f3f5;
+  border-radius: 15px;
+  color: #1c1c1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.result h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.meta {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
